@@ -1,5 +1,5 @@
 import { PropsWithChildren, useCallback, useEffect, useState } from "react";
-import { routerContext, routerControlContext } from "./routerContext";
+import { routerContext, routerControlContext } from "./RouterContext";
 
 const Router: React.FC<PropsWithChildren> = ({ children }) => {
   const [path, setPath] = useState(window.location.pathname);
@@ -13,7 +13,6 @@ const Router: React.FC<PropsWithChildren> = ({ children }) => {
 
   const callback = useCallback((e: PopStateEvent) => {
     handleChangePath(window.location.pathname);
-    console.log(e.state);
   }, []);
 
   useEffect(() => {

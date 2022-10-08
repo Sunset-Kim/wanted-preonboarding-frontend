@@ -1,6 +1,6 @@
-import { createContext, Dispatch, SetStateAction } from "react";
+import { createContext } from "react";
 
-const routerContext = createContext({
+const RouterContext = createContext({
   path: "",
 });
 
@@ -8,8 +8,8 @@ interface RouterControlContext {
   setPath: (path: string) => void;
 }
 
-const routerControlContext = createContext<RouterControlContext>({
+const RouterControlContext = createContext<RouterControlContext>({
   setPath: () => {},
 });
 
-export { routerContext, routerControlContext };
+export { RouterContext, RouterControlContext };
